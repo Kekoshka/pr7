@@ -25,7 +25,7 @@ void ParsingHtml(string htmlCode)
 }
 string GetContent(Cookie token)
 {
-    string url = "";
+    string url = "https://news.permaviat.ru/main";
     Debug.WriteLine($"Выполняем запрос {url}");
     HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
     request.CookieContainer = new CookieContainer();
@@ -39,7 +39,7 @@ string GetContent(Cookie token)
 Cookie SingIn(string login, string password)
 {
     Cookie token = null;
-    string url = "";
+    string url = "https://news.permaviat.ru/ajax/login.php";
 
     Debug.WriteLine($"Выполняем запрос: {url}");
     HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
